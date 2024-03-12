@@ -63,6 +63,7 @@ const RatioButton = ({ field, form, label }) => {
 
 function Create() {
     const navigate = useNavigate();
+    const [error, setError] = useState('');
   return (
     <div className='pt-16'>
         <Auth />
@@ -122,6 +123,7 @@ function Create() {
                                     className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500" 
                                     placeholder="Enter your email" 
                                 />
+                                <div className='text-red-600'>{error}</div>
                                 <ErrorMessage name="email" component="div" className="text-red-500" />
                             </div>
                         </div>
