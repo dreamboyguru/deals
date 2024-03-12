@@ -86,12 +86,17 @@ function Create() {
                             'Content-Type': 'multipart/form-data'
                             }
                         });
-                        console.log(response.data);
-                        } catch (error) {
-                            console.error('Error uploading image:', error);
+                        if(response.data === 'Employee found') {
+                            setError('Email exist');
+                            
+                        } else {
+                            navigate('/')
                         }
-                        console.log(values); 
-                        navigate('/');
+                    } catch (error) {
+                        console.error('Error uploading image:', error);
+                    }
+                    console.log(values); 
+                    // navigate('/');
                     }}
                 >
                 {({ setFieldValue, isSubmitting }) => (
