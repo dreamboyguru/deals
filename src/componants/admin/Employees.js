@@ -9,7 +9,7 @@ function Employees() {
     useEffect (() => {
         const fetchdata = async() => {
             try {
-                await axios.get('http://localhost:3001/employees')
+                await axios.get('https://dealsbackend.onrender.com/employees')
                     .then(response =>setData(response.data));
                     // console.log(data);
             } catch(err) {
@@ -19,7 +19,7 @@ function Employees() {
         fetchdata()
     }, [])
     const handleDelete = (email) => {
-        axios.delete(`http://localhost:3001/employees/${email}`)
+        axios.delete(`https://dealsbackend.onrender.com/employees/${email}`)
             .then(response => console.log('deleted', + response))
             .then(window.location.reload())
         // console.log(id);
