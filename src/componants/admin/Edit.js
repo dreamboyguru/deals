@@ -77,7 +77,7 @@ const navigate = useNavigate()
                 validationSchema={validationSchema}
                 onSubmit={async(values) => {
                     try {
-                        const response = await axios.put(`http://localhost:3001/employees/${email}`, values);
+                        const response = await axios.put(`https://dealsbackend.onrender.com/employees/${email}`, values);
                         console.log(response.data);
                         navigate('/')
                     } catch (error) {
