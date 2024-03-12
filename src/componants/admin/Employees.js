@@ -21,7 +21,7 @@ function Employees() {
     const handleDelete = (email) => {
         axios.delete(`https://dealsbackend.onrender.com/employees/${email}`)
             .then(response => console.log('deleted', + response))
-            .then(window.location.reload())
+            // .then(window.location.reload())
         // console.log(id);
     }
     // const handleEdit = async(id) => {
