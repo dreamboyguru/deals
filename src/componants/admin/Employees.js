@@ -52,7 +52,7 @@ function Employees() {
                         <tr key={employee.id} className="hover:bg-gray-100">
                             <td className="border px-4 py-10">{index+1}</td>
                             <td className="border p-1 w-1/12">
-                                <img src={`http://localhost:3001/images/${employee.image}`} alt='pr'
+                                <img src={`https://dealsbackend.onrender.com/images/${employee.image}`} alt='pr'
                                     className='w-full rounded-3xl' 
                                 />
                             </td>
