@@ -57,8 +57,7 @@ function Edit() {
     const { data } = location.state;
     const email = data.email;
     console.log(data);
-    
-const navigate = useNavigate()
+    const navigate = useNavigate()
   return (
     <div className='pt-16'>
         <div className="max-w-[70%] mx-52 bg-white p-8 rounded-lg shadow-lg border-2">
