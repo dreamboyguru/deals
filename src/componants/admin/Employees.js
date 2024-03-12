@@ -23,7 +23,7 @@ function Employees() {
             .then(response => console.log('deleted', + response))
             // .then(window.location.reload())
         // console.log(id);
-        window.location.reload();
+        // window.location.reload();
     }
     // const handleEdit = async(id) => {
     //    await axios.put('http://localhost:3001/employees', )
