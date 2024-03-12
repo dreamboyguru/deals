@@ -23,7 +23,7 @@ const Login = () => {
           onSubmit={async(values, { setSubmitting }) => {
             console.log(values);
                 try {
-                const response = await axios.post('http://localhost:3001/login', values);
+                const response = await axios.post('https://dealsbackend.onrender.com/login', values);
                     console.log('Login successful:', response.data);
                     localStorage.setItem('email', response.data)
                     if(response.data) {
