@@ -3,6 +3,7 @@ import React from 'react'
 import axios from 'axios';
 import * as Yup from 'yup';
 import Auth from './Auth';
+import { useNavigate } from 'react-router-dom';
 
 
 const validationSchema = Yup.object().shape({
@@ -61,6 +62,7 @@ const RatioButton = ({ field, form, label }) => {
   
 
 function Create() {
+    const navigate = useNavigate();
   return (
     <div className='pt-16'>
         <Auth />
@@ -88,7 +90,8 @@ function Create() {
                         } catch (error) {
                             console.error('Error uploading image:', error);
                         }
-                        console.log(values);    
+                        console.log(values); 
+                        navigate('/');
                     }}
                 >
                 {({ setFieldValue, isSubmitting }) => (
