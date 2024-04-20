@@ -25,9 +25,9 @@ const Login = () => {
             console.log(values);
                 try {
                 const response = await axios.post('https://dealsbackend.onrender.com/login', values);
-                    console.log('Login successful:', response.data);
-                    localStorage.setItem('email', response.data)
+                    // console.log('Login successful:', response.data);
                     if(response.data !== 'not found' ) {
+                        localStorage.setItem('email', response.data)
                         navigate('/')
                         window.location.reload();
                     } else {
